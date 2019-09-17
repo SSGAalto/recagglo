@@ -7,11 +7,13 @@ A detailed presentation of the algorithm is provided in Section 3 (Marchal S. an
 
 ## Requirements and setup
 
-Python 3 packages: numpy, scipy, pandas, argparse. The code was tested with Python versions 3.6 and 3.7.
+Python 3 packages: numpy, scipy, pandas, argparse. Also, you need a C compiler and Cython to compile the cython code. The code was tested with Python versions 3.6 and 3.7.
 
-`pip3 install numpy, scipy, pandas, argparse`
+`pip3 install numpy, scipy, pandas, argparse, Cython`
 
-Also, you need a C compiler and cython to compile the cython code.
+Alternatively, you can use the provided `requirements.txt` file:
+
+`pip3 install -r requirements.txt`
 
 Compile the cython package `asym_linkage.pyx` with this command:
 
