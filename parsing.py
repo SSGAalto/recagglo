@@ -30,6 +30,23 @@ class Parser:
             help="CSV output file containing input data + cluster number.")
 
         parser.add_argument(
+            "--algorithm",
+            metavar="INT",
+            type=self.__check_positive_int,
+            dest="algo",
+            action="store",
+            default=0,
+            help="clustering algorithm to use: 0=RecAgglo, 1=SampleClust, 2=AggloClust")
+
+        parser.add_argument(
+            "--weight",
+            type=str,
+            dest="weight",
+            action="store",
+            default="[1.]",
+            help="List of weight for each attribute [0,0.5,...,2.5] (default weights = 1.)")
+
+        parser.add_argument(
             "--delta_a",
             dest="delta_a",
             metavar="INT",

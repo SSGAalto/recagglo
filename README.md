@@ -61,6 +61,10 @@ Override default args as necessary.
 
 optional arguments:
   -h, --help            show this help message and exit
+  --algorithm INT       clustering algorithm to use: 0=RecAgglo,
+                        1=SampleClust, 2=AggloClust
+  --weight WEIGHT       List of weight for each attribute [0,0.5,...,2.5]
+                        (default weights = 1.)
   --delta_a INT         Threshold for cluster sampling (default = 1000). Must
                         be > 0.
   --delta_fc INT        Threshold for full clustering (default = 1). Must be >
@@ -71,7 +75,8 @@ optional arguments:
                         max_clust = n/mclust (default = 6.0). Must be > 0.
   --rho_s FLOAT         Multiplier of sqrt(n) for sample size (default = 0.5).
                         Must be > 0.
-  --skip_index          Skip first column if it is an index and not a feature.
+  --skip_index          Skip first column if it is an index and not a
+                        attribute.
   --verbose             Verbose printing.
 
 Required input/output file arguments:
